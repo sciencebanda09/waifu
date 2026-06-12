@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CodeWaifu HUD</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    html, body {
+      width: 300px; height: 120px;
+      background: transparent;
+      overflow: hidden;
+      -webkit-app-region: no-drag;
+    }
+  </style>
+</head>
+<body>
+  <div id="hud">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+      <span id="pet-name" class="stat-value" style="font-size:11px;letter-spacing:1px">WAIFU</span>
+      <span id="stage-badge" class="stage-badge">EGG</span>
+      <span style="display:flex;align-items:center">
+        <span id="mood-dot" class="mood-dot" style="background:#888"></span>
+        <span id="mood-name" class="stat-label">BORED</span>
+      </span>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2px">
+      <span class="stat-label">LV <span id="level">1</span></span>
+      <span class="stat-label" id="xp-text">0 / 100 XP</span>
+    </div>
+    <div class="xp-bar-track"><div id="xp-bar" class="xp-bar-fill" style="width:0%"></div></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:6px;margin-bottom:2px">
+      <span class="stat-label">HUNGER</span>
+      <span class="stat-label" id="hunger-text">100</span>
+    </div>
+    <div class="xp-bar-track"><div id="hunger-bar" class="hunger-bar-fill xp-bar-fill" style="width:100%"></div></div>
+  </div>
+  <script src="hud.js"></script>
+</body>
+</html>
